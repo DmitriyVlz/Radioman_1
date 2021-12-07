@@ -31,11 +31,28 @@ class RadioTest {
     }
 
     @Test
+    void nextChannel2() {
+        Radio radio = new Radio();
+        radio.setCurrentChannel(10);
+        radio.increaseChannel();
+        assertEquals(1, radio.getCurrentChannel());
+    }
+
+
+    @Test
     void previousChannel() {
         Radio radio = new Radio();
         radio.setCurrentChannel(6);
         radio.decreaseChannel();
         assertEquals(5, radio.getCurrentChannel());
+    }
+
+    @Test
+    void previousChannel2() {
+        Radio radio = new Radio();
+        radio.setCurrentChannel(-1);
+        radio.decreaseChannel();
+        assertEquals(9, radio.getCurrentChannel());
     }
 
     @Test
