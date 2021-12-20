@@ -9,53 +9,18 @@ public class Radio {
     private int maxVolume = 100;
     private int minVolume = 0;
 
+    public Radio() {
+    }
+
     public Radio(int numberStation) {
         this.numberStation = numberStation;
         this.maxStation = numberStation - 1;
     }
 
-    public Radio(int currentStation, int currentVolume, int numberStation, int maxStation) {
-        this.currentStation = currentStation;
-        this.currentVolume = currentVolume;
-        this.numberStation = numberStation;
-        this.maxStation = maxStation;
-    }
-
-    public Radio() {
-    }
-
-    public int getMinStation() {
-        return minStation;
-    }
-
-    public int getNumberStation() {
-        return numberStation;
-    }
-
-    public void setNumberStation(int numberStation) {
-        this.numberStation = numberStation;
-    }
-
-    public int getMaxStation() {
-        return maxStation;
-    }
-
-    public void setMaxStation(int maxStation) {
-        this.maxStation = maxStation;
-    }
-
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
-    public int getMinVolume() {
-        return minVolume;
-    }
-
-    // make getter and setter
     public int getCurrentStation() {
         return currentStation;
     }
+
 
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {
@@ -79,6 +44,30 @@ public class Radio {
             return;
         }
         this.currentVolume = currentVolume;
+    }
+
+    public int getMinStation() {
+        return minStation;
+    }
+
+    public int getNumberStation() {
+        return numberStation;
+    }
+
+    public void setNumberStation(int numberStation) {
+        this.numberStation = numberStation;
+    }
+
+    public int getMaxStation() {
+        return maxStation;
+    }
+
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
+    public int getMinVolume() {
+        return minVolume;
     }
 
 
